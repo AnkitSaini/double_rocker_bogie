@@ -4,3 +4,6 @@ Design Optimisation - file:///home/ankit/Downloads/Ullrich_GoktoganASSCDesignOpt
 
 Bogie Runt Rover - http://www.robotshop.com/en/bogie-runt-rover.html?gclid=Cj0KCQjw0K7NBRC7ARIsAEaqLRF2eqgEDr1YmZRWypwNUfqE2iR_tHMBV_Sxn9H8VMaEvSL2WMmm3AMaAkAfEALw_wcB
 
+Links for calculation of wheel base - 
+https://www.slideshare.net/RahulHans3/project-ppt-66799672?next_slideshow=1
+https://www.slideshare.net/HaniroothChandraseka/rocker-bogie-mechanism-design-and-fabrication
