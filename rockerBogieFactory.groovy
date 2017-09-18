@@ -36,7 +36,8 @@ CSG rockerBogie(){
 		//Combining bogie links
 		bogie = bogieLink1.union(bogieLink2)
 	}
-	
+
+	// Moving rocker and bogie to proper location to merge them together
 	rocker = rocker.move(rockerLength.getMM()/2,0,0)
 	bogie = bogie.move((wheelBase.getMM() - 2*bogieLength.getMM()*Math.cos(Math.toRadians((180-angle)/2)))*Math.sin(Math.toRadians(angle/2)) + bogieLength.getMM()/2,
 				    (wheelBase.getMM() - 2*bogieLength.getMM()*Math.cos(Math.toRadians((180-angle)/2)))*Math.cos(Math.toRadians(angle/2)),
