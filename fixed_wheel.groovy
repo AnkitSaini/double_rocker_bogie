@@ -26,27 +26,11 @@ return new ICadGenerator(){
 
 
 		if (linkIndex==0){
-			File wheel_file = ScriptingEngine.fileFromGit(
-			"https://github.com/NeuronRobotics/NASACurisoity.git",
-			"STL/wheel.STL");
-			File tire_file = ScriptingEngine.fileFromGit(
-			"https://github.com/NeuronRobotics/NASACurisoity.git",
-			"STL/tire.STL");
-			/*
-			CSG wheel = Vitamins.get(wheel_file)
-			wheel=wheel			
-					.movex(-wheel.getMaxX()/2)
-					.movey(-wheel.getMaxY()/2)
-					.movez(-wheel.getMaxZ()/2)
-					.rotx(90)
-			wheel.setManipulator(manipulator)
 			
-			allCad.add(wheel)
-			*/
-			CSG tire = Vitamins.get(tire_file)
+			CSG tire = new Cylinder(dh.getR(),dh.getR(),10, (int)30).toCSG()
+					.rotx(90)
 					.movex(-dh.getR())
 					.movez(-dh.getD())
-
 			tire.setManipulator(manipulator)
 
 			allCad.add(tire)

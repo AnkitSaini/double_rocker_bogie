@@ -17,21 +17,15 @@ return new ICadGenerator(){
 	public ArrayList<CSG> generateBody(MobileBase b ) {
 		ArrayList<CSG> allCad=new ArrayList<>();
 		double size =40;
-		CSG body = new Cube(size).toCSG();
+		CSG body = new Cube(size).toCSG()
+					.movez(size)
 		ArrayList<CSG> attach = [];
-		for(DHParameterKinematics l:b.getAppendages()){
-			TransformNR position = l.getRobotToFiducialTransform();
-			Transform csgTrans = TransformFactory.nrToCSG(position)
-			CSG attachment = body// get attachment for root
-				.transformed(csgTrans)
-				.setColor(javafx.scene.paint.Color.RED)
-			attach.add(attachment);
-		}
 	 	for(DHParameterKinematics l:b.getSteerable()){
 			TransformNR position = l.getRobotToFiducialTransform();
 			Transform csgTrans = TransformFactory.nrToCSG(position)
 			CSG attachment = body// get attachment for root
-				.transformed(csgTrans)
+				.movex(position.getX())
+				.movey(position.getY())
 				.setColor(javafx.scene.paint.Color.WHITE)
 			attach.add(attachment);
 		}
@@ -39,7 +33,8 @@ return new ICadGenerator(){
 			TransformNR position = l.getRobotToFiducialTransform();
 			Transform csgTrans = TransformFactory.nrToCSG(position)
 			CSG attachment = body// get attachment for root
-				.transformed(csgTrans)
+				.movex(position.getX())
+				.movey(position.getY())
 				.setColor(javafx.scene.paint.Color.BLUE)
 			attach.add(attachment);
 		}
