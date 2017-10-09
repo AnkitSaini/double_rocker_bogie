@@ -1,2 +1,2 @@
-# double_rocker_bogie
-Bowler Studio Double Rocker Bogie Project
+# NASACurisoity
+A Bowler kinematics model for the NASA Curiosity 3d print model
